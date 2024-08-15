@@ -1,0 +1,343 @@
+:root{
+    --fundo : #06061a;
+    --cor: #f3f3f3;
+    --botao-1: #E8546b;
+    --botao-2: #AC3CF6;
+    --up:#2eb1a3;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--fundo);
+    color: var(--cor);
+    font-family: "Poppins", sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    border: none;
+    background: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.bg{
+    background: linear-gradient(150deg, rgba(172, 60, 246, 0.2), var(--fundo));
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1.25rem;
+    padding-block: 1.5rem;
+    max-width: 1366px;
+    margin-inline: auto;/* deixar centralizado*/
+}
+
+.header__logo{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav__ul{
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav__a{
+    color: inherit;/* herda a cor do pai, mas especificamnete do primeiro intem que tenha a cor*/
+    text-decoration: none;
+}
+
+.header__icon{
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+.header__icon-btn{
+    display: none;
+}
+@media (width < 768px){
+    .header__nav{
+        display: none;
+    }
+    .header__icon-btn{
+        display: block;
+    }/*fazer o javascript*/
+}
+/************************************ primeira div  **********************************************/
+
+.hero{
+    display: flex;
+    padding-inline: 1.25rem;
+    padding-top: 6rem;
+    overflow: hidden;
+    max-width: 1280px;/* para não ficar colado na parede*/
+    margin-inline: auto;/* deixar centralizado*/
+}
+
+.hero__left{
+    flex: 1;/*para responsividade, divide meioa meio*/
+}
+
+.hero__up{
+    color: var(--up);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.hero__title{
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 500;
+    letter-spacing: -0.05em;/* Espaçamento das letras*/
+    margin-top: 0.75rem;
+}
+
+.hero__description{
+    font-size: 0.9rem;
+    opacity: 0.6;
+    font-weight: 300;
+    line-height: calc(1em + 0.5rem);/* em é relativo ao font-size do item*/
+    margin-block: 1.5rem;
+    max-width: 55ch;/*ch define o numero de caractres maximos na linha*/
+}
+
+.hero__btn{
+    font-size: 1rem;
+    padding: 0.5em 2em;/* em é relativo ao fonr-size */
+    border-radius: 6px;
+    background: linear-gradient(to right, var(--botao-1), var(--botao-2)); 
+    color: #000;
+}
+
+.hero__right{
+    flex: 1;/*para responsividade, divide meioa meio*/
+}
+
+.hero__img {
+    transform: rotate(15deg);
+    max-width: 550px;/* tamanho maximo da imagem*/
+}
+
+@media (width < 1024px){
+    .hero{
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .hero__title{
+        max-width: 20ch;
+    }
+
+    .hero__img{
+        width: 90%;
+        max-width: 400px;
+        margin-inline: auto;
+    }
+}
+
+@media (width < 475px){
+    .hero__title{
+        font-size: 2.5rem;
+    }
+}
+
+/************************************ segunda div  **********************************************/
+.info{
+    padding-top: 2rem;
+    max-width: 1280px;/* para não ficar colado na parede*/
+    margin-inline: auto;/* deixar centralizado*/
+}
+
+.line{
+    width: 100%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.itens-wrapper{
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;/*deixa responsivo, manda um embaixo do outro*/
+    gap: 1.5rem;
+    padding-inline: 1.25rem;
+}
+
+.item{
+    flex: 1;
+    min-width: 150px;
+}
+
+.item__title{
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+}
+
+.item__description{
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* info wrappe */
+
+.info-wrapper{
+    display: flex;
+    align-items: center;
+    padding-inline: 1.25rem;
+    gap: 1.25rem;
+    margin-top: 7rem;
+}
+
+.info__left{
+    flex: 1;
+}
+
+.info__right{
+    flex: 1;
+    /* align-self: center; alinha só ele */
+}
+
+.section__up-text{
+    color: var(--up);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.section__title{
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.section__description{
+    color: rgba(255, 255, 255, 0.7);
+    line-height: calc(1em + 0.7rem);
+    margin-block: 1rem;
+}
+
+.section__btn{
+    font-size: 1rem;
+    padding: 0.5em 2em;/* em é relativo ao fonr-size */
+    border-radius: 6px;
+    background: linear-gradient(to right, var(--botao-1), var(--botao-2)); 
+    color: #000;
+}
+
+@media (width < 1024px){
+    .info-wrapper{
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+    .section__description{
+        max-width: 60ch;
+    }
+    .info__right{
+        display: flex;
+        flex-direction: column;
+    }
+    .section__btn{
+        margin-top: 1.5rem;
+        width: 50%;
+        max-width: 170px;
+        align-self: center;
+    }
+}/*nesse caso foi melhor usar o flex-direction do que o flex-wrapper, img ficava piquena*/
+
+@media (width < 475px){
+    .section__title{
+        font-size: 2rem;
+    }
+    .info__right{
+        display: flex;
+        flex-direction: column;
+    }
+    .section__btn{
+        margin-top: 1.5rem;
+        width: 50%;
+        max-width: 170px;
+        align-self: center;
+    }
+}
+
+/************************************ terceira div  **********************************************/
+
+.features{
+    padding-top: 2rem;
+    max-width: 1280px;/* para não ficar colado na parede*/
+    margin-inline: auto;/* deixar centralizado*/
+}
+
+.features-wrapper{
+ background-color: #131325;
+ padding: 4rem 2rem 2rem 2rem;
+ border-radius: 12px;
+}
+
+.features__text{
+    text-align: center;
+}
+
+.features--description{
+    max-width: 60ch;
+    margin-inline: auto;
+}
+
+.features__cards{
+    margin-top: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    row-gap: 4rem;
+}
+
+.features__card{
+    background-color: #25283d;
+    padding: 6rem 2rem 2rem 2rem;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 300px;
+    position: relative;/*faz a imagem ficar relativo*/
+}
+
+.features__card-img{
+    width: 6rem;
+    position: absolute;
+    top: -3rem;
+    left: 2rem;
+}
+
+.feature__card-title{
+    font-size: 1,5rem;
+    font-weight: 500;
+}
+
+.feature__card-description{
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 300;
+}
