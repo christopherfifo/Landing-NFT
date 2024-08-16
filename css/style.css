@@ -80,12 +80,50 @@ header{
     display: none;
 }
 @media (width < 768px){
-    .header__nav{
-        display: none;
-    }
-    .header__icon-btn{
+    .header__icon-btn {
         display: block;
-    }/*fazer o javascript*/
+        z-index: 2;
+        cursor: pointer;
+        position: relative;
+        transform: scale(1.5);
+      }
+      
+      .header__nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.9);
+        transform: translateX(+100%);
+        transition: transform 0.5s ease-in-out;
+        z-index: 1;
+      }
+      
+      .nav__ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding-block: 3rem;
+        height: 100%;
+        width: 70%;
+        background-color: var(--fundo);
+        position: relative;
+        float: right;
+        align-items: center;
+        justify-content: space-between;
+      }
+      
+      .header__nav.active {
+        transform: translateX(0);
+      }
+      .nav__li:nth-child(1) {
+        margin-top: 3rem;
+      }
+      .nav__li:last-child {
+        margin-bottom: 4rem;
+      }
+      
 }
 /************************************ primeira div  **********************************************/
 
@@ -96,7 +134,7 @@ header{
     overflow: hidden;
     max-width: 1280px;/* para não ficar colado na parede*/
     margin-inline: auto;/* deixar centralizado*/
-}
+}/*muito provavelmente vou ter que substituir por position:fixed;*/
 
 .hero__left{
     flex: 1;/*para responsividade, divide meioa meio*/
