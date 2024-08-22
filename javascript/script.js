@@ -21,4 +21,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   
-  
+// Seleciona os botões e as imagens
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+const images = document.querySelectorAll('.slider');
+
+// Variável para rastrear o índice atual da imagem
+let currentIndex = 0;
+
+// Adiciona eventos de clique nos botões
+prevBtn.addEventListener('click', showPrevImage);
+nextBtn.addEventListener('click', showNextImage);
+
+function updateImageVisibility() {
+    images.forEach((img, index) => {
+        // Exibe apenas a imagem atual
+        img.style.display = index === currentIndex ? 'block' : 'none';
+    });
+}
+
+// Mostra a imagem anterior
+function showPrevImage() {
+    currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+    updateImageVisibility();
+}
+
+// Mostra a próxima imagem
+function showNextImage() {
+    currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+    updateImageVisibility();
+}
+
+// Inicializa mostrando a primeira imagem
+updateImageVisibility();
+
