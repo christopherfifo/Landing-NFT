@@ -55,3 +55,6 @@ function showNextImage() {
 // Inicializa mostrando a primeira imagem
 updateImageVisibility();
 
+
+
+

@@ -215,6 +215,7 @@ header{
     padding-top: 2rem;
     max-width: 1280px;/* para não ficar colado na parede*/
     margin-inline: auto;/* deixar centralizado*/
+    overflow: hidden;
 }
 
 .line{
@@ -336,6 +337,7 @@ header{
     padding-top: 2rem;
     max-width: 1280px;/* para não ficar colado na parede*/
     margin-inline: auto;/* deixar centralizado*/
+    overflow: hidden;
 }
 
 .features-wrapper{
@@ -396,6 +398,7 @@ header{
     gap: 6;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .info2-wrapper{
@@ -492,6 +495,7 @@ header{
     max-width: 1280px;/* para não ficar colado na parede*/
     margin-inline: auto;/* deixar centralizado*/
     padding-inline: 1.25rem;
+    overflow: hidden;
 }
 
 .registro-container{
@@ -545,6 +549,7 @@ header{
     max-width: 1280px;/* para não ficar colado na parede*/
     margin-inline: auto;/* deixar centralizado*/
     padding-inline: 1.25rem;
+    overflow: hidden;
 }
 
 .depoimento__size{
@@ -623,6 +628,7 @@ header{
     max-width: 1280px;/* para não ficar colado na parede*/
     margin-inline: auto;/* deixar centralizado*/
     padding-inline: 1.25rem;
+    overflow: hidden;
 }
 
 .video__size{
@@ -649,6 +655,7 @@ header{
     max-width: 1280px;/* para não ficar colado na parede*/
     margin-inline: auto;/* deixar centralizado*/
     padding-inline: 1.25rem;
+    overflow: hidden;
 }
 
 .agora__size{
@@ -680,6 +687,7 @@ header{
     display: flex;
     height: auto;
     background: linear-gradient(to right, #131C20, #110922); 
+    overflow: hidden;
 }
 
 .end__size{
@@ -788,6 +796,18 @@ header{
     flex-wrap: wrap;
     column-gap: 0.25rem;
     margin-block: 1rem;
+}
+
+
+.end__ul{
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.end__a{
+    color: inherit;/* herda a cor do pai, mas especificamnete do primeiro intem que tenha a cor*/
+    text-decoration: none;
 }
 
 @media (width < 768px){
