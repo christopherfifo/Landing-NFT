@@ -165,7 +165,7 @@ header{
 
 .hero__btn{
     font-size: 1rem;
-    padding: 0.5em 2em;/* em é relativo ao fonr-size */
+    padding: 1em 2em;/* em é relativo ao fonr-size */
     border-radius: 6px;
     background: linear-gradient(to right, var(--botao-1), var(--botao-2)); 
     color: #000;
@@ -288,7 +288,7 @@ header{
 
 .section__btn{
     font-size: 1rem;
-    padding: 0.5em 2em;/* em é relativo ao fonr-size */
+    padding: 1em 2em;/* em é relativo ao fonr-size */
     border-radius: 6px;
     background: linear-gradient(to right, var(--botao-1), var(--botao-2)); 
     color: #000;
@@ -514,7 +514,7 @@ header{
 
 .registro__btn{
     font-size: 1.4rem;
-    padding: 0.5em 2em;/* em é relativo ao fonr-size */
+    padding: 1em 2em;/* em é relativo ao fonr-size */
     border-radius: 6px;
     background: #020202; 
     color: var(--cor);
@@ -641,4 +641,159 @@ header{
     max-width: 800px; /* limite de largura para o vídeo */
     border-radius: 20px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/************************************ oitava div  **********************************************/
+.agora{
+    margin-block: 8rem;
+    max-width: 1280px;/* para não ficar colado na parede*/
+    margin-inline: auto;/* deixar centralizado*/
+    padding-inline: 1.25rem;
+}
+
+.agora__size{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height:  550px;
+    background-color: #131325;
+    border-radius: 20px;
+}
+
+.agora__contencao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    margin: auto;
+}
+
+.agora__description{
+    max-width: 55ch;
+    font-size: 1.5rem;
+}
+
+/************************************ nona div  **********************************************/
+.end{
+    width: 100%;
+    display: flex;
+    height: auto;
+    background: linear-gradient(to right, #131C20, #110922); 
+}
+
+.end__size{
+    display: flex;
+    flex-direction: column;
+    padding-inline: 1.25rem;
+    max-width: 1480px;/* para não ficar colado na parede*/
+    margin-inline: auto;/* deixar centralizado*/
+}
+
+.end__contencao{
+    width: 100%;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+    column-gap: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.end__divisao{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.end__description{
+    color: var(--cor);
+    max-width: 50ch;
+}
+
+.end__tile{
+    color: var(--cor);
+    margin-bottom: 0.5rem;
+}
+
+.contact-info, .subscribe-info {
+    row-gap: 0.4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.end__tile {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.end__tile::before {
+    content: '';
+    display: inline-block;
+    width: 4px; 
+    height: 1.2em; 
+    background-color: var(--up);
+    margin-right: 0.5rem; 
+}
+
+.contact-info p, .subscribe-info p {
+    color: var(--cor);
+    margin: 0.5rem 0;
+}
+
+.contact-info-s {
+    font-weight: 700; 
+    color: var(--up); 
+    font-size: 1.2em; 
+    padding: 0.2em; 
+}
+
+.subscribe__form {
+    display: flex;
+    align-items: center;
+}
+
+.subscribe__form-input {
+    padding: 1rem;
+    border-radius: 20px 0 0 20px;
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    margin-right: -40px;
+    padding-right: 45px;
+    background-color: #1F222A;
+    color: var(--cor);
+    max-width: 280px;
+}
+
+.subscribe__form-btn {
+    padding-block: 1rem;
+    padding-inline: 2.25rem;
+    border-radius: 20px ;
+    background-color: var(--up);
+    color: var(--cor);
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-weight: bold;
+}
+
+
+.end__final{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 0.25rem;
+    margin-block: 1rem;
+}
+
+@media (width < 768px){
+    .end__contencao{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        row-gap: 2.5rem;
+    }
 }
