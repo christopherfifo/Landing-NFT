@@ -39,5 +39,5 @@ Uma landing page responsiva sobre NFTs, desenvolvida para praticar Flexbox, sem�
 
 - **HTML5** - Estruturação semântica
 - **CSS3** (Flexbox) - Layout responsivo e flexível
-- **JavaScript** - Interatividade e animações
+- **JavaScript** - Interatividade e animações.
 
